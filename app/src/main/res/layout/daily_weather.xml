@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        tools:text="day"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentLeft="true"
+         />
+
+    <ImageView
+        android:id="@+id/dailyIcon"
+        android:layout_width="55dip"
+        android:layout_height="45dip"
+        android:background="@android:color/transparent"
+        tools:src="@drawable/p01d"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/minDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#63ABC9"
+        tools:text="min"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/maxDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        tools:text="max"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/minDay"
+        android:layout_toStartOf="@+id/minDay"
+        android:layout_marginRight="25dp"   />
+
+
+
+</RelativeLayout>
