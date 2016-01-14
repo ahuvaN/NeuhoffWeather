@@ -15,14 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText zip;
     private Button button;
-   // private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-       // preferences = this.getSharedPreferences("default", MODE_PRIVATE);
 
         zip = (EditText) findViewById(R.id.inputZip);
         button = (Button) findViewById(R.id.cont);
@@ -42,13 +39,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   /* @Override
-    protected void onPause() {
-        super.onPause();
-        //first we want to get values in editText to be able to save them
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putStringSet("ZIPCODE", zip.getText().toString());
-        editor.apply();
-    }*/
 
 }

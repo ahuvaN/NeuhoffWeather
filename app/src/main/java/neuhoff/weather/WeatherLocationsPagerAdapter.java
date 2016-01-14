@@ -2,8 +2,8 @@ package neuhoff.weather;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -31,8 +31,10 @@ public class WeatherLocationsPagerAdapter extends PagerAdapter {
     private ImageView bkgd;
     private EditText newZip;
     private Button add;
+    private ViewPager viewPager;
 
-    public WeatherLocationsPagerAdapter(ArrayList<String> list, Context parent) {
+    public WeatherLocationsPagerAdapter(ViewPager pager,ArrayList<String> list, Context parent) {
+        viewPager = pager;
         locations = list;
         context = parent;
 
@@ -96,6 +98,8 @@ public class WeatherLocationsPagerAdapter extends PagerAdapter {
                     public void onClick(DialogInterface dialog, int id) {
                         locations.add(String.valueOf(newZip.getText()));
                         notifyDataSetChanged();
+                        viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
