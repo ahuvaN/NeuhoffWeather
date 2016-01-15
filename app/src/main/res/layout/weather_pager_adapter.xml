@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     android:background="#C0C0C0"
     >
+
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/plus"
